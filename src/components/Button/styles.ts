@@ -13,6 +13,7 @@ export const Container = styled(TouchableOpacity)<Props>`
     max-height: 56px;
     background-color: ${({ theme, type }) => type === 'primary' ? theme.colors.green_700 : theme.colors.red_dark};
     border-radius: 6px;
+    margin-top: 12px;
     justify-content: center;
     align-items: center;
 `;

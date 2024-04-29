@@ -6,17 +6,26 @@ import {
     BackButton, 
     BackIcon 
 } from "./styles";
+import { useNavigation } from '@react-navigation/native';
 
 type Props = {
     showBackButton?: boolean
 }
 
 export function Header({ showBackButton = false }: Props) {
+    const navigation = useNavigation()
+
+    function handleGoBackHome() {
+        navigation.navigate('groups')
+    }
+
     return (
         <Container>
             {
             showBackButton &&
-                <BackButton>
+                <BackButton
+                    onPress={handleGoBackHome}
+                >
                     <BackIcon />
                 </BackButton>
             }
